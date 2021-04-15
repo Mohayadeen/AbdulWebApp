@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: mohayadeenabdulwebapp 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mohayadeenabdulwebapp
+  template:
+    metadata:
+      labels:
+        app: mohayadeenabdulwebapp 
+    spec:
+      containers:
+        - name: mohayadeenabdulwebapp 
+          image: moicr.azurecr.io/mohayadeenabdulwebapp
+          ports:
+          - containerPort: 80
